@@ -1,0 +1,9 @@
+[unf1,f1]=audioread('F:\Shubhamj\work_ME\unf_1000.wav');
+figure()
+plot(unf1)
+[unf2,f1]=audioread('F:\Shubhamj\work_ME\unf_2000.wav');
+figure()
+plot(unf2)
+[unf3,f1]=audioread('F:\Shubhamj\work_ME\unf_3000.wav');
+figure()
+plot(unf3)

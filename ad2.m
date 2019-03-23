@@ -1,0 +1,19 @@
+[y,fs]=audioread('D:\work_ME\spf_3000.wav');
+z=y;
+n=length(z);
+frame_len=floor(0.1*fs);
+n_fram=floor(n/frame_len);
+count=0;
+sig1=zeros(n,1);
+for k=1:n_fram
+frame=z((k-1)*frame_len+1:(k)*frame_len);
+mv=max(frame);
+if(mv>0.015)
+count=count+1;
+sig1((count-1)*frame_len+1:frame_len*count)=frame;
+end
+end
+%figure
+%plot(n,z)
+%figure
+%plot(sig)
